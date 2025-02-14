@@ -1,0 +1,196 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ff6a00;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('assets/images/about-hero.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* History Section */
+.history, .vision, .values, .team, .awards {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #222;
+}
+
+.history .section-title, .vision .section-title, .values .section-title,
+.team .section-title, .awards .section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.history-content, .vision-content, .values-content, .team-members, .awards-content {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+/* Values Section - List */
+.values-content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.values-content li {
+    margin-bottom: 15px;
+}
+
+/* Team Section */
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1.2em;
+}
+
+/* Awards Section */
+.awards-content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.awards-content li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+.delay-6 {
+    animation-delay: 1.2s;
+}
+
+.delay-7 {
+    animation-delay: 1.4s;
+}
+
+.delay-8 {
+    animation-delay: 1.6s;
+}
+
+.delay-9 {
+    animation-delay: 1.8s;
+}

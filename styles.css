@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,111 +7,164 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
+    background-color: #111;
     color: white;
     line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-nav ul {
+/* Navbar Styling */
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar nav ul {
+    display: flex;
     list-style: none;
 }
 
-nav ul li {
-    margin: 0 20px;
+.navbar nav ul li {
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: white;
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    color: #ff6a00;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url({[images/Type-R\ 1.png]}) no-repeat center center/cover;
-    text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: url('assets/images/hero-car.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+    position: relative;
 }
 
-.hero h1 {
+.hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s 0.5s forwards;
 }
 
-.scroll-down {
-    padding: 10px 20px;
-    background-color: #555;
+.hero .btn {
+    background-color: #ff6a00;
+    padding: 15px 30px;
     color: #fff;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeIn 1.5s 1s forwards;
 }
 
-/* Gallery */
-#gallery {
-    padding: 50px;
-    background-color: #1d1d1d;
+.hero-image img {
+    width: 50%;
+    border-radius: 15px;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
 }
 
-.gallery-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.gallery-item {
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery-item img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.gallery-item:hover {
-    transform: scale(1.1);
-}
-
-/* Contact Section */
-#contact {
-    padding: 50px 20px;
-    background-color: #333;
+/* Models Section */
+.models {
+    padding: 80px 20px;
+    background-color: #222;
     text-align: center;
 }
 
-form input, form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 10px 0;
+.models h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: slideUp 1s forwards;
 }
 
-form button {
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+/* Model Cards */
+.model-cards {
+    display: flex;
+    justify-content: space-between;
 }
+
+.model-card {
+    background-color: #333;
+    width: 30%;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.model-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.model-card h3 {
+    margin-top: 15px;
+    font-size: 1.8em;
+}
+
+/* Button Hover Effect */
+.model-card:hover {
+    transform: translateY(-10px);
+}
+
+.model-card .btn {
+    background-color: #ff6a00;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
