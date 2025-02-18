@@ -46,7 +46,7 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    color: #ff6a00;
+    color: #7a7a7a;
 }
 
 /* Hero Section */
@@ -77,9 +77,9 @@ body {
 }
 
 .hero .btn {
-    background-color: #ff6a00;
+    background-color: #dedede;
     padding: 15px 30px;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
@@ -87,6 +87,10 @@ body {
     animation: fadeIn 1.5s 1s forwards;
 }
 
+.btn:hover{
+    background-color: rgb(108, 108, 108);
+    color: white;
+}
 .hero-image img {
     width: 100%;
     border-radius: 15px;
