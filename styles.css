@@ -1,174 +1,66 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     background-color: #111;
     color: white;
-    line-height: 1.2;
+    overflow-x: hidden;
 }
 
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-    background-color: #000;
+header {
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 10;
-}
-
-.navbar .logo img {
-    width: 130px;
-}
-
-.navbar nav ul {
-    display: flex;
-    list-style: none;
-}
-
-.navbar nav ul li {
-    margin: 0 15px;
-}
-
-.navbar nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.navbar nav ul li a:hover {
-    color: #7a7a7a;
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background: url('images/Airbrush-Image-Enhancer.jpg') no-repeat center center/cover;
-    background-size: cover;
-    color: white;
-    position: relative;
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 1.5s forwards;
-}
-
-.hero-content p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeIn 1.5s 0.5s forwards;
-}
-
-.hero .btn {
-    background-color: #dedede;
-    padding: 15px 30px;
-    color: #000000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    opacity: 0;
-    animation: fadeIn 1.5s 1s forwards;
-}
-
-.btn:hover{
-    background-color: rgb(108, 108, 108);
-    color: white;
-}
-.hero-image img {
+    left: 0;
     width: 100%;
-    border-radius: 15px;
-    opacity: 0;
-    animation: fadeIn 2s 1s forwards;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
 }
 
-/* Models Section */
-.models {
-    padding: 80px 20px;
-    background-color: #222;
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff0099;
+}
+
+section {
+    padding: 50px 10%;
     text-align: center;
 }
 
-.models h2 {
-    font-size: 3em;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: slideUp 1s forwards;
-}
-
-/* Model Cards */
-.model-cards {
-    display: flex;
-    justify-content: space-between;
-}
-
-.model-card {
-    background-color: #333;
-    width: 30%;
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
     padding: 20px;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
 }
 
-.model-card img {
+footer p {
+    font-size: 1rem;
+}
+
+img {
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
-.model-card h3 {
-    margin-top: 15px;
-    font-size: 1.8em;
-}
-
-/* Button Hover Effect */
-.model-card:hover {
-    transform: translateY(-10px);
-}
-
-.model-card .btn {
-    background-color: #ff6a00;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    color: #fff;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
